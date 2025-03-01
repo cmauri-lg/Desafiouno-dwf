@@ -4,8 +4,7 @@ VALUES
     ('Base de Datos'),
     ('Lenguaje de Marcado'),
     ('Java con Spring Boot'),
-    ('Desarrollo con React')
-;
+    ('Desarrollo con React');
 
 INSERT INTO ALUMNO (
     NOMBRE,
@@ -32,5 +31,4 @@ VALUES
    (
        'Mark',
        'Zuckerberg',
-       5)
-;
+       5);
