@@ -17,16 +17,19 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
+//Entidad del Negocio - ALUMNO
 public class PostComment {
 
     @Id
     private Long id;
     @Column(nullable = false)
-    private String review;
+    private String nombre;
     @Column(nullable = false)
-    private LocalDate commentDate;
+    private String Apellido;
+
     @ManyToOne(fetch = FetchType.LAZY) //Relacion de Muchos a uno
-    @JoinColumn(name = "post_id") //Definimos el nombre de la llave foranea
+    @JoinColumn(name = "id_materia") //Definimos el nombre de la llave foranea
     private Post post;
 
 }
