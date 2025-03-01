@@ -22,7 +22,7 @@ public class PostRepository {
     public Post findById(final Long id) {
         return entityManager.find(Post.class, id);
     }
-    @Transactional
+
     public void save(final Post post) {
         entityManager.persist(post);
     }

@@ -6,9 +6,17 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.*;
+
 import java.time.LocalDate;
 
-@Entity
+@Entity //Anotacion para marcar que es una entidad de negocio
+@Getter
+@Setter
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class PostComment {
 
     @Id
@@ -21,45 +29,4 @@ public class PostComment {
     @JoinColumn(name = "post_id") //Definimos el nombre de la llave foranea
     private Post post;
 
-    public PostComment(Long id, String review, LocalDate commentDate, Post post) {
-        this.id = id;
-        this.review = review;
-        this.commentDate = commentDate;
-        this.post = post;
-    }
-
-    public PostComment() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getReview() {
-        return review;
-    }
-
-    public void setReview(String review) {
-        this.review = review;
-    }
-
-    public LocalDate getCommentDate() {
-        return commentDate;
-    }
-
-    public void setCommentDate(LocalDate commentDate) {
-        this.commentDate = commentDate;
-    }
-
-    public Post getPost() {
-        return post;
-    }
-
-    public void setPost(Post post) {
-        this.post = post;
-    }
 }
